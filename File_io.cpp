@@ -7,7 +7,7 @@ bool saveGame(const std::vector<std::vector<int>>& board, int moves) {
     using namespace std;
     ofstream file(savef);
     if (!file.is_open()) {
-        cout << "Îøèáêà ñîõðàíåíèÿ!\n";
+        cout << "ÐžÑˆÐ¸Ð±ÐºÐ° ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð¸Ñ!\n";
         return false;
     }
     int size = board.size();
@@ -19,7 +19,7 @@ bool saveGame(const std::vector<std::vector<int>>& board, int moves) {
         file << "\n";
     }
     file.close();
-    cout << "Èãðà ñîõðàíåíà!\n";
+    cout << "Ð˜Ð³Ñ€Ð° ÑÐ¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð°!\n";
     return true;
 }
 
@@ -27,7 +27,7 @@ bool loadGame(std::vector<std::vector<int>>& board, int& moves) {
     using namespace std;
     ifstream file(savef);
     if (!file.is_open() || file.peek() == EOF) {
-        cout << "Ñîõðàíåííàÿ èãðà íå íàéäåíà!\n";
+        cout << "Ð¡Ð¾Ñ…Ñ€Ð°Ð½ÐµÐ½Ð½Ð°Ñ Ð¸Ð³Ñ€Ð° Ð½Ðµ Ð½Ð°Ð¹Ð´ÐµÐ½Ð°!\n";
         return false;
     }
     int size;
@@ -39,6 +39,6 @@ bool loadGame(std::vector<std::vector<int>>& board, int& moves) {
         }
     }
     file.close();
-    cout << "Èãðà çàãðóæåíà!\n";
+    cout << "Ð˜Ð³Ñ€Ð° Ð·Ð°Ð³Ñ€ÑƒÐ¶ÐµÐ½Ð°!\n";
     return true;
 }
