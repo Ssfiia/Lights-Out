@@ -26,10 +26,10 @@ bool checkWin(const std::vector<std::vector<int>>& board) {
 void newGame(std::vector<std::vector<int>>& board, int& moves) {
     using namespace std;
     int size;
-    cout << "Ââåäèòå ðàçìåð ïîëÿ (2-9): ";
+    cout << "Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ Ã°Ã Ã§Ã¬Ã¥Ã° Ã¯Ã®Ã«Ã¿ (2-9): ";
     cin >> size;
     while (size < 2 || size > 9) {
-        cout << "Ââåä¸í íåêîððåêòíûé ðàçìåð ïîëÿ.\n Ââåäèòå êîððåêòíî (2-9):";
+        cout << "Ã‚Ã¢Ã¥Ã¤Â¸Ã­ Ã­Ã¥ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã»Ã© Ã°Ã Ã§Ã¬Ã¥Ã° Ã¯Ã®Ã«Ã¿.\n Ã‚Ã¢Ã¥Ã¤Ã¨Ã²Ã¥ ÃªÃ®Ã°Ã°Ã¥ÃªÃ²Ã­Ã® (2-9):";
         cin >> size;
     }
     board.clear();
@@ -42,5 +42,6 @@ void newGame(std::vector<std::vector<int>>& board, int& moves) {
         int j = rand() % size;
         change(board, i, j);
     }
-    cout << "Íîâàÿ èãðà ñîçäàíà! Ðàçìåð ïîëÿ: " << size << "x" << size << "\n";
+    cout << "ÃÃ®Ã¢Ã Ã¿ Ã¨Ã£Ã°Ã  Ã±Ã®Ã§Ã¤Ã Ã­Ã ! ÃÃ Ã§Ã¬Ã¥Ã° Ã¯Ã®Ã«Ã¿: " << size << "x" << size << "\n";
+
 }
